@@ -9,5 +9,29 @@ export class HomeComponent {
   public data= "hello world";
   public color= "text-primary";
   public data1= true;
+  public data2= [
+    {
+      name: 'aaaaa',
+      id: 1,
+    },
+    {
+      name: 'bbbbb',
+      id:2,
+    },
+    {
+      name: 'ccccc',
+      id:3,
+    },
+    {
+      name: 'ddddd',
+      id:4,
+    },
+    {
+      name: 'eeeee',
+    id:5,
+  },
+  
+
+  ]
 
 }
