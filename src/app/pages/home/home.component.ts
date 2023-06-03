@@ -6,43 +6,41 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  public data= "hello world";
-  public color= "text-primary";
-  public data1= true;
-  public data2= [
+  public productdetail : any;
+  public getProductDetail(products:any){
+    console.log(products)
+    this.productdetail =products;
+  }
+  public products= [
     {
-      name: 'aaaaa',
-      id: 1,
+    id: 1,
+    name: 'product 1',
+    price: '100',
+    description:'this is a wider range card',
+    url:'assets/images/home/placeimg_640_480_any.jpg',
     },
     {
-      name: 'bbbbb',
-      id:2,
+    id: 2,
+    name: 'product 2',
+    price: '100',
+    description:'this is a wider range card',
+     url:'assets/images/home/placeimg_640_480_any.jpg',
     },
     {
-      name: 'ccccc',
-      id:3,
-    },
-    {
-      name: 'ddddd',
-      id:4,
-    },
-    {
-      name: 'eeeee',
-    id:5,
-  },
-  
+    id: 3,
+    name: 'product 3',
+    price: '100',
+    description:'this is a wider range card',
+     url:'assets/images/home/placeimg_640_480_any.jpg',
 
-  ]
-
-  public constructor() {
-    this.fun1();
-  }
-  public fun1() {
-    alert('fun1');
-  }
-  public fun2() {
-    alert('fun2');
-  }
+    },
+    {
+    id: 4,
+    name: 'product 4',
+    price: '100',
+    description:'this is a wider range card',
+    url:'assets/images/home/placeimg_640_480_any.jpg',
+    }
+    ]
 
 }
-

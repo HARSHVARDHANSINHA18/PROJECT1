@@ -1,17 +1,52 @@
-<div class="body"><div>{{data}}</div>
-<p class="{{color}}">harsh</p>
-<p class="{{data1==true ?'text-primary':'text-secondary'}}">hi</p>
-<ul>
-    <li *ngFor="let data2 of data2 ">
-        <span class="mr-3">{{data2.id}}</span><span>{{data2.name}}</span>
-    </li>
-</ul>
-<button (click)="fun2()">vhg</button>
-    <div class="center">
-        <div>
-            
-
+<div class="container">
+    <div class="product row">
+        <div class="card col-lg-4 col-md-6 col-sm-12" style="width: 18rem;" *ngFor="let product of products">
+            <img src="assets/images/home/placeimg_640_480_any.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">golf</h5>
+              <p class="card-text">$1000000</p>
+              <a href="#" class="btn btn-primary">Add to cart</a>
+              <a href="#" class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="getProductDetail(product)">Go somewhere</a>
         </div>
+          </div>
     </div>
+</div>
+<!-- Button trigger modal -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">product details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="card mb-3" style="max-width: 540px;" *ngIf="productdetail">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="assets/images/home/placeimg_640_480_any.jpg" class="img-fluid rounded-start" alt="golf" style="height:100%">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Vertically centered modal -->
+
+
 
